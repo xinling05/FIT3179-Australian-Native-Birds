@@ -1,0 +1,126 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 340,
+  "data": {
+    "url": "data/Ward_etal_SupplementaryData_R1.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.Group === 'Birds'"
+    },
+    {
+      "filter": "datum['EPBC Act status'] === 'CR' || datum['EPBC Act status'] === 'EN' || datum['EPBC Act status'] === 'VU'"
+    },
+    {
+      "calculate": "datum['Broad level threat'] === 'Adverse fire regimes' ? 'Fire regimes' : datum['Broad level threat'] === 'Changed surface and groundwater regimes' ? 'Water regime changes' : datum['Broad level threat'] === 'Climate change and severe weather' ? 'Climate and severe weather' : datum['Broad level threat'] === 'Disrupted ecosystem and population processes' ? 'Ecosystem disruption' : datum['Broad level threat'] === 'Habitat loss, fragmentation and degradation' ? 'Habitat loss and degradation' : datum['Broad level threat'] === 'Invasive species and diseases' ? 'Invasive species and disease' : datum['Broad level threat'] === 'Overexploitation and other direct harm from human activities' ? 'Direct human harm' : datum['Broad level threat']",
+      "as": "Threat Type"
+    },
+    {
+      "calculate": "datum['EPBC Act status'] === 'VU' ? 'Vulnerable' : datum['EPBC Act status'] === 'EN' ? 'Endangered' : datum['EPBC Act status'] === 'CR' ? 'Critically Endangered' : datum['EPBC Act status']",
+      "as": "Conservation Status"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "distinct",
+          "field": "Species name adjusted",
+          "as": "Species Count"
+        }
+      ],
+      "groupby": [
+        "Threat Type",
+        "Conservation Status"
+      ]
+    }
+  ],
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "y": {
+      "field": "Threat Type",
+      "type": "nominal",
+      "title": "Main threat",
+      "sort": "-x",
+      "axis": {
+        "labelLimit": 150,
+        "labelFontSize": 10,
+        "titlePadding": 8
+      }
+    },
+    "x": {
+      "field": "Species Count",
+      "type": "quantitative",
+      "title": "Affected bird species"
+    },
+    "yOffset": {
+      "field": "Conservation Status"
+    },
+    "color": {
+      "field": "Conservation Status",
+      "type": "nominal",
+      "title": "Conservation status",
+      "scale": {
+        "domain": [
+          "Critically Endangered",
+          "Endangered",
+          "Vulnerable"
+        ],
+        "range": [
+          "#8C2D04",
+          "#D95F0E",
+          "#FDBE85"
+        ]
+      },
+      "legend": {
+        "orient": "bottom",
+        "direction": "horizontal",
+        "titleAnchor": "start",
+        "columns": 3,
+        "offset": 10,
+        "labelFontSize": 10,
+        "titleFontSize": 11
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Threat Type",
+        "type": "nominal",
+        "title": "Main threat"
+      },
+      {
+        "field": "Conservation Status",
+        "type": "nominal",
+        "title": "Conservation status"
+      },
+      {
+        "field": "Species Count",
+        "type": "quantitative",
+        "title": "Affected bird species"
+      }
+    ]
+  },
+  "background": "white",
+  "config": {
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "gridColor": "#E5E7EB",
+      "domainColor": "#9CA3AF",
+      "tickColor": "#9CA3AF"
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 11,
+      "titleFontSize": 12
+    }
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Which states host more threatened birds?",
+  "width": 480,
+  "height": 420,
+  "projection": {
+    "type": "equalEarth",
+    "center": [134, -28],
+    "scale": 570
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/australia_states_2026.json",
+        "format": {
+          "type": "topojson",
+          "feature": "australia_states_2026"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#F3F4F6",
+        "stroke": "#AAB2BD",
+        "strokeWidth": 0.8
+      }
+    },
+    {
+      "data": {
+        "url": "data/20260828spcs.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.Class === 'Aves'"
+        },
+        {
+          "fold": [
+            "ACT",
+            "NSW",
+            "NT",
+            "QLD",
+            "SA",
+            "TAS",
+            "VIC",
+            "WA"
+          ],
+          "as": [
+            "State",
+            "Present"
+          ]
+        },
+        {
+          "filter": "datum.Present === 'Yes'"
+        },
+        {
+          "aggregate": [
+            {
+              "op": "distinct",
+              "field": "Scientific Name",
+              "as": "Listed Birds"
+            }
+          ],
+          "groupby": [
+            "State"
+          ]
+        },
+        {
+          "calculate": "datum.State === 'ACT' ? 'Australian Capital Territory' :\ndatum.State === 'NSW' ? 'New South Wales' :\ndatum.State === 'NT' ? 'Northern Territory' :\ndatum.State === 'QLD' ? 'Queensland' :\ndatum.State === 'SA' ? 'South Australia' :\ndatum.State === 'TAS' ? 'Tasmania' :\ndatum.State === 'VIC' ? 'Victoria' :\ndatum.State === 'WA' ? 'Western Australia' : datum.State",
+          "as": "State or Territory"
+        },
+        {
+          "calculate": "datum.State === 'ACT' ? 149.13 : datum.State === 'NSW' ? 147.0 : datum.State === 'NT' ? 133.5 : datum.State === 'QLD' ? 144.0 : datum.State === 'SA' ? 135.0 : datum.State === 'TAS' ? 146.5 : datum.State === 'VIC' ? 144.5 : datum.State === 'WA' ? 121.0 : null",
+          "as": "Longitude"
+        },
+        {
+          "calculate": "datum.State === 'ACT' ? -35.28 : datum.State === 'NSW' ? -32.5 : datum.State === 'NT' ? -19.5 : datum.State === 'QLD' ? -22.0 : datum.State === 'SA' ? -30.0 : datum.State === 'TAS' ? -42.0 : datum.State === 'VIC' ? -37.0 : datum.State === 'WA' ? -26.0 : null",
+          "as": "Latitude"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "opacity": 0.65,
+        "color": "#6D28D9",
+        "stroke": "white",
+        "strokeWidth": 1
+      },
+      "encoding": {
+        "longitude": {
+          "field": "Longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "Latitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "Listed Birds",
+          "type": "quantitative",
+          "title": "Listed bird species",
+          "scale": {
+            "range": [
+              100,
+              1600
+            ]
+          }
+        },
+        "tooltip": [
+          {
+            "field": "State or Territory",
+            "type": "nominal",
+            "title": "State or territory"
+          },
+          {
+            "field": "Listed Birds",
+            "type": "quantitative",
+            "title": "Listed bird species"
+          }
+        ]
+      }
+    }
+  ],
+  "background": "white",
+  "config": {
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Georgia",
+      "fontSize": 18,
+      "fontWeight": "bold",
+      "anchor": "start",
+      "color": "#1F2937",
+      "offset": 12
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "gridColor": "#E5E7EB",
+      "domainColor": "#9CA3AF",
+      "tickColor": "#9CA3AF"
+    },
+    "legend": {
+    "orient": "bottom",
+    "direction": "horizontal",
+    "title": "Listed bird species",
+    "symbolType": "circle"
+    }
+  }
+}

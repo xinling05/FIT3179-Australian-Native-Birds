@@ -1,0 +1,240 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 480,
+  "height": 330,
+
+  "data": {
+    "url": "data/20260828spcs.csv"
+  },
+
+  "transform": [
+    {
+      "filter": "datum.Class === 'Aves'"
+    },
+    {
+      "filter": "datum.Family != null && datum.Family !== ''"
+    },
+
+    {
+      "joinaggregate": [
+        {
+          "op": "distinct",
+          "field": "Scientific Name",
+          "as": "National Family Species"
+        }
+      ],
+      "groupby": [
+        "Family"
+      ]
+    },
+
+    {
+      "fold": [
+        "ACT",
+        "NSW",
+        "NT",
+        "QLD",
+        "SA",
+        "TAS",
+        "VIC",
+        "WA"
+      ],
+      "as": [
+        "State",
+        "Present"
+      ]
+    },
+
+    {
+      "filter": "datum.Present === 'Yes'"
+    },
+
+    {
+      "aggregate": [
+        {
+          "op": "distinct",
+          "field": "Scientific Name",
+          "as": "Listed Bird Species"
+        },
+        {
+          "op": "max",
+          "field": "National Family Species",
+          "as": "National Family Species"
+        }
+      ],
+      "groupby": [
+        "Family",
+        "State"
+      ]
+    },
+
+    {
+      "pivot": "State",
+      "value": "Listed Bird Species",
+      "groupby": [
+        "Family",
+        "National Family Species"
+      ]
+    },
+
+    {
+      "window": [
+        {
+          "op": "row_number",
+          "as": "Family Rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "National Family Species",
+          "order": "descending"
+        },
+        {
+          "field": "Family",
+          "order": "ascending"
+        }
+      ]
+    },
+
+    {
+      "filter": "datum['Family Rank'] <= 10"
+    },
+
+    {
+      "fold": [
+        "ACT",
+        "NSW",
+        "NT",
+        "QLD",
+        "SA",
+        "TAS",
+        "VIC",
+        "WA"
+      ],
+      "as": [
+        "State",
+        "Listed Bird Species"
+      ]
+    },
+
+    {
+      "calculate": "isValid(datum['Listed Bird Species']) ? datum['Listed Bird Species'] : 0",
+      "as": "Listed Bird Species"
+    },
+
+    {
+      "calculate": "datum.State === 'ACT' ? 'Australian Capital Territory' : datum.State === 'NSW' ? 'New South Wales' : datum.State === 'NT' ? 'Northern Territory' : datum.State === 'QLD' ? 'Queensland' : datum.State === 'SA' ? 'South Australia' : datum.State === 'TAS' ? 'Tasmania' : datum.State === 'VIC' ? 'Victoria' : datum.State === 'WA' ? 'Western Australia' : datum.State",
+      "as": "State or Territory"
+    }
+  ],
+
+  "mark": {
+    "type": "rect",
+    "stroke": "white",
+    "strokeWidth": 1
+  },
+
+  "encoding": {
+    "x": {
+      "field": "State or Territory",
+      "type": "nominal",
+      "title": "State or territory",
+
+      "sort": [
+        "Western Australia",
+        "Northern Territory",
+        "South Australia",
+        "Queensland",
+        "New South Wales",
+        "Australian Capital Territory",
+        "Victoria",
+        "Tasmania"
+      ],
+
+      "axis": {
+        "labelAngle": -35,
+        "labelLimit": 100,
+        "labelFontSize": 10,
+        "titlePadding": 12
+      }
+    },
+
+    "y": {
+      "field": "Family",
+      "type": "nominal",
+      "title": "Bird family",
+      "sort": {
+        "field": "Family Rank",
+        "order": "ascending"
+      },
+      "axis": {
+        "labelLimit": 130
+      }
+    },
+
+    "color": {
+      "field": "Listed Bird Species",
+      "type": "quantitative",
+      "title": "Listed bird species",
+
+      "scale": {
+        "scheme": "purples"
+      },
+
+      "legend": {
+        "orient": "bottom",
+        "direction": "horizontal",
+        "gradientLength": 200,
+        "gradientThickness": 12,
+        "titleAnchor": "start"
+      }
+    },
+
+    "tooltip": [
+      {
+        "field": "Family",
+        "type": "nominal",
+        "title": "Bird family"
+      },
+      {
+        "field": "State or Territory",
+        "type": "nominal",
+        "title": "State or territory"
+      },
+      {
+        "field": "Listed Bird Species",
+        "type": "quantitative",
+        "title": "Listed bird species"
+      }
+    ]
+  },
+
+  "background": "white",
+
+  "config": {
+    "font": "Arial",
+
+    "view": {
+      "stroke": null
+    },
+
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "grid": false,
+      "domainColor": "#9CA3AF",
+      "tickColor": "#9CA3AF"
+    },
+
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "labelColor": "#4B5563",
+      "titleColor": "#374151"
+    }
+  }
+}

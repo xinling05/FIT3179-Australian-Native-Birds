@@ -1,0 +1,112 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+
+  "title": "Where are Rainbow Lorikeet hotspots?",
+
+  "width": 480,
+  "height": 420,
+
+  "projection": {
+    "type": "equalEarth",
+    "center": [134, -28],
+    "scale": 570
+  },
+
+  "layer": [
+    {
+      "data": {
+        "url": "data/australia_states_2026.json",
+        "format": {
+          "type": "topojson",
+          "feature": "australia_states_2026"
+        }
+      },
+
+      "mark": {
+        "type": "geoshape",
+        "fill": "#F8FAFC",
+        "stroke": "#CBD5E1",
+        "strokeWidth": 0.7
+      }
+    },
+
+    {
+      "data": {
+        "url": "data/rainbow_lorikeet_hexbins_50km.geojson",
+        "format": {
+          "type": "json",
+          "property": "features"
+        }
+      },
+
+      "mark": {
+        "type": "geoshape",
+        "stroke": "white",
+        "strokeWidth": 0.2
+      },
+
+      "encoding": {
+        "shape": {
+          "field": "geometry",
+          "type": "geojson"
+        },
+
+        "color": {
+          "field": "properties.sightingCount",
+          "type": "quantitative",
+          "title": "Sightings per 50 km hexagon",
+          "scale": {
+            "type": "sqrt",
+            "scheme": "blues"
+          },
+
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "gradientLength": 220,
+            "gradientThickness": 12,
+            "title": "Sightings per 50 km hexagon",
+            "titleAnchor": "start"
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "properties.sightingCount",
+            "type": "quantitative",
+            "title": "Recorded sightings",
+            "format": ","
+          }
+        ]
+      }
+    }
+  ],
+
+  "background": "white",
+
+  "config": {
+    "font": "Arial",
+
+    "view": {
+      "stroke": null
+    },
+
+    "title": {
+      "font": "Georgia",
+      "fontSize": 18,
+      "fontWeight": "bold",
+      "anchor": "start",
+      "color": "#1F2937",
+      "offset": 12
+    },
+
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "titleColor": "#374151",
+      "labelColor": "#4B5563"
+    }
+  }
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Australian Native Birds</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+<main class="page">
+  <header class="hero">
+    <p class="eyebrow">Australian biodiversity</p>
+    <h1>Australian Native Birds</h1>
+    <p class="intro">Distribution, observations, diversity and conservation.</p>
+  </header>
+
+  <section>
+    <h2>Where are Australia’s native birds?</h2>
+    <div class="chart-grid">
+      <article class="card"><div id="vis1"></div><p class="annotation">New South Wales hosts the largest listed share.</p><p class="source">Source: DCCEEW, 2026; ABS, 2026.</p></article>
+      <article class="card"><div id="vis2"></div><p class="annotation">Records cluster strongly along Australia’s populated east.</p><p class="source">Source: Atlas of Living Australia, 2025 occurrence records.</p></article>
+      <article class="card"><div id="vis3"></div><p class="annotation">Hotspots reveal concentrated reporting, not population density.</p><p class="source">Source: Atlas of Living Australia, 2025 occurrence records.</p></article>
+      <article class="card"><div id="vis4"></div><p class="annotation">Larger circles indicate more listed bird species.</p><p class="source">Source: DCCEEW, 2026; ABS, 2026.</p></article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Which birds are observed and under threat?</h2>
+    <div class="chart-grid">
+      <article class="card">
+        <h3 class="chart-title">How has the threatened bird index changed?</h3>
+        <div id="vis5"></div>
+        <p class="chart-note">
+          Shaded area shows uncertainty around the index.
+        </p>
+        <p class="annotation">
+          The index falls substantially below its 1985 baseline.
+        </p>
+        <p class="source">
+          Source: Australia State of the Environment, 2021.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3 class="chart-title">
+          Which threatened bird families occur across Australia?
+        </h3>
+        <div id="vis6"></div>
+        <p class="annotation">
+          Threatened bird families vary strongly across states.
+        </p>
+        <p class="source">
+          Source: DCCEEW, 2026.
+        </p>
+      </article>
+      <article class="card card-wide"><div id="vis7"></div><p class="annotation">Australian Magpies lead recorded observations in 2025.</p><p class="source">Source: Atlas of Living Australia, 2025 data.</p></article>
+    </div>
+  </section>
+
+  <section>
+    <h2>Bird diversity and conservation</h2>
+
+    <div class="chart-grid">
+
+      <article class="card">
+        <h3 class="chart-title">
+          Which bird families contain most species?
+        </h3>
+
+        <div id="vis8"></div>
+
+        <p class="annotation">
+          Meliphagidae contains the most native bird species.
+        </p>
+
+        <p class="source">
+          Source: Atlas of Living Australia, 2025 data.
+        </p>
+      </article>
+
+
+      <article class="card">
+        <h3 class="chart-title">
+          How does threat status vary by state?
+        </h3>
+
+        <div id="vis9"></div>
+
+        <p class="annotation">
+          Vulnerable birds form the largest listed group.
+        </p>
+
+        <p class="source">
+          Source: DCCEEW, 2026.
+        </p>
+      </article>
+
+
+      <article class="card">
+        <h3 class="chart-title">
+          Which threats affect listed birds most?
+        </h3>
+
+        <div id="vis10"></div>
+
+        <p class="annotation">
+          Invasive species and habitat loss affect many birds.
+        </p>
+
+        <p class="source">
+          Source: Ward, M. et al. (2021).
+        </p>
+      </article>
+
+
+      <article class="card">
+        <h3 class="chart-title">
+          How are listed birds classified?
+        </h3>
+
+        <div id="vis11"></div>
+
+        <p class="annotation">
+          Vulnerable and endangered birds dominate the national list.
+        </p>
+
+        <p class="source">
+          Source: DCCEEW, 2026.
+        </p>
+      </article>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+
+    <h2>Sources</h2>
+
+    <p>
+      Australian Government Department of Climate Change, Energy,
+      the Environment and Water (DCCEEW),
+      <em>Threatened Species and Ecological Communities of National Environmental Significance</em>, 2026.
+      <a href="https://www.data.gov.au/data/dataset/threatened-species-state-lists"
+        target="_blank">Source</a>
+    </p>
+
+    <p>
+      Atlas of Living Australia (ALA),
+      <em>Australian bird occurrence records and species checklist</em>,
+      using 2025 records.
+      <a href="https://biocache.ala.org.au/occurrences/search?q=*%3A*&fq=year%3A2025&fq=class%3AAves"
+        target="_blank">Source</a>
+    </p>
+
+    <p>
+      Australian Bureau of Statistics (ABS),
+      <em>Australian Statistical Geography Standard (ASGS), Edition 4:
+      States and Territories</em>, 2026.
+      <a href="https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs/edition-4-july-2026-june-2031/access-and-downloads/digital-boundary-files"
+        target="_blank">Source</a>
+    </p>
+
+    <p>
+      Australia State of the Environment,
+      <em>Biodiversity: Threatened Bird Index for Australia</em>, 2021.
+      <a href="https://soe.dcceew.gov.au/biodiversity/environment/flora-and-fauna"
+        target="_blank">Source</a>
+    </p>
+
+    <p>
+      Ward, M. et al. (2021),
+      <em>A national-scale dataset for threats impacting Australia's
+      imperiled flora and fauna</em>.
+      <a href="https://doi.org/10.6084/m9.figshare.13150943.v1"
+        target="_blank">Source</a>
+    </p>
+
+    <p class="footer-author">
+      <strong>Author:</strong> Xin Ling Chong
+    </p>
+
+    <p>
+      <strong>Date:</strong> 12 October 2026
+    </p>
+
+    <p class="ai-acknowledgement">
+      <strong>AI Acknowledgement:</strong>
+      ChatGPT was used to assist with wording refinement and
+      visualisation refinement.
+    </p>
+
+  </footer>
+</main>
+
+<script>
+const embedOptions = {
+  renderer: "svg",
+  actions: {
+    export: true,
+    source: true,
+    compiled: false,
+    editor: true
+  }
+};
+
+for (let i = 1; i <= 11; i++) {
+  vegaEmbed(`#vis${i}`, `js/chart${i}.json`, embedOptions)
+    .catch(console.error);
+}
+</script>
+</body>
+</html>

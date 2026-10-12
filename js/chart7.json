@@ -1,0 +1,106 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Which native birds are recorded most?",
+  "width": 900,
+  "height": 330,
+  "data": {
+    "url": "data/ala_birds_checklist_2025.csv",
+    "format": {
+      "type": "csv",
+      "parse": {
+        "Number of records": "number"
+      }
+    }
+  },
+  "transform": [
+    {
+      "filter": "isValid(datum['Vernacular Name']) && isValid(datum['Number of records'])"
+    },
+    {
+      "window": [
+        {
+          "op": "rank",
+          "as": "Rank"
+        }
+      ],
+      "sort": [
+        {
+          "field": "Number of records",
+          "order": "descending"
+        }
+      ]
+    },
+    {
+      "filter": "datum.Rank <= 10"
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 3,
+    "color": "#2563EB"
+  },
+  "encoding": {
+    "y": {
+      "field": "Vernacular Name",
+      "type": "nominal",
+      "title": "Bird species",
+      "sort": "-x",
+      "axis": {
+        "labelLimit": 180
+      }
+    },
+    "x": {
+      "field": "Number of records",
+      "type": "quantitative",
+      "title": "Recorded observations"
+    },
+    "tooltip": [
+      {
+        "field": "Vernacular Name",
+        "type": "nominal",
+        "title": "Bird species"
+      },
+      {
+        "field": "Species Name",
+        "type": "nominal",
+        "title": "Scientific name"
+      },
+      {
+        "field": "Number of records",
+        "type": "quantitative",
+        "title": "Recorded observations",
+        "format": ","
+      }
+    ]
+  },
+  "background": "white",
+  "config": {
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Georgia",
+      "fontSize": 18,
+      "fontWeight": "bold",
+      "anchor": "start",
+      "color": "#1F2937",
+      "offset": 12
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "gridColor": "#E5E7EB",
+      "domainColor": "#9CA3AF",
+      "tickColor": "#9CA3AF"
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 11,
+      "titleFontSize": 12
+    }
+  }
+}

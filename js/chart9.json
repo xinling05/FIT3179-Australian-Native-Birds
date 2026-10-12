@@ -1,0 +1,137 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 480,
+  "height": 340,
+  "data": {
+    "url": "data/20260828spcs.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.Class === 'Aves'"
+    },
+    {
+      "fold": [
+        "ACT",
+        "NSW",
+        "NT",
+        "QLD",
+        "SA",
+        "TAS",
+        "VIC",
+        "WA"
+      ],
+      "as": [
+        "State",
+        "Present"
+      ]
+    },
+    {
+      "filter": "datum.Present === 'Yes'"
+    },
+    {
+      "calculate": "datum.State === 'ACT' ? 'Australian Capital Territory' :\ndatum.State === 'NSW' ? 'New South Wales' :\ndatum.State === 'NT' ? 'Northern Territory' :\ndatum.State === 'QLD' ? 'Queensland' :\ndatum.State === 'SA' ? 'South Australia' :\ndatum.State === 'TAS' ? 'Tasmania' :\ndatum.State === 'VIC' ? 'Victoria' :\ndatum.State === 'WA' ? 'Western Australia' : datum.State",
+      "as": "State or Territory"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "distinct",
+          "field": "Scientific Name",
+          "as": "Species Count"
+        }
+      ],
+      "groupby": [
+        "State or Territory",
+        "Threatened status"
+      ]
+    }
+  ],
+  "mark": {
+    "type": "bar"
+  },
+  "encoding": {
+    "y": {
+      "field": "State or Territory",
+      "type": "nominal",
+      "title": "State or territory",
+      "sort": "-x",
+      "axis": {
+        "labelLimit": 135,
+        "labelFontSize": 10,
+        "titlePadding": 8
+      }
+    },
+    "x": {
+      "field": "Species Count",
+      "type": "quantitative",
+      "title": "Listed bird species"
+    },
+    "color": {
+      "field": "Threatened status",
+      "type": "nominal",
+      "title": "Conservation status",
+      "scale": {
+        "domain": [
+          "Critically Endangered",
+          "Endangered",
+          "Vulnerable",
+          "Extinct"
+        ],
+        "range": [
+          "#8C2D04",
+          "#D95F0E",
+          "#FDBE85",
+          "#54278F"
+        ]
+      },
+      "legend": {
+        "orient": "bottom",
+        "direction": "horizontal",
+        "titleAnchor": "start",
+        "columns": 4,
+        "offset": 10,
+        "labelFontSize": 10,
+        "titleFontSize": 11
+      }
+    },
+    "tooltip": [
+      {
+        "field": "State or Territory",
+        "type": "nominal",
+        "title": "State or territory"
+      },
+      {
+        "field": "Threatened status",
+        "type": "nominal",
+        "title": "Conservation status"
+      },
+      {
+        "field": "Species Count",
+        "type": "quantitative",
+        "title": "Species count"
+      }
+    ]
+  },
+  "background": "white",
+  "config": {
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "gridColor": "#E5E7EB",
+      "domainColor": "#9CA3AF",
+      "tickColor": "#9CA3AF"
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 11,
+      "titleFontSize": 12
+    }
+  }
+}

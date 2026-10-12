@@ -1,0 +1,103 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 480,
+  "height": 340,
+  "data": {
+    "url": "data/20260828spcs.csv"
+  },
+  "transform": [
+    {
+      "filter": "datum.Class === 'Aves'"
+    },
+    {
+      "aggregate": [
+        {
+          "op": "distinct",
+          "field": "Scientific Name",
+          "as": "Species Count"
+        }
+      ],
+      "groupby": [
+        "Threatened status"
+      ]
+    }
+  ],
+  "mark": {
+    "type": "bar",
+    "cornerRadiusEnd": 3
+  },
+  "encoding": {
+    "x": {
+      "field": "Threatened status",
+      "type": "nominal",
+      "title": "Conservation category",
+      "sort": [
+        "Critically Endangered",
+        "Endangered",
+        "Vulnerable",
+        "Extinct"
+      ],
+      "axis": {
+        "labelAngle": -20
+      }
+    },
+    "y": {
+      "field": "Species Count",
+      "type": "quantitative",
+      "title": "Listed bird species"
+    },
+    "color": {
+      "field": "Threatened status",
+      "type": "nominal",
+      "legend": null,
+      "scale": {
+        "domain": [
+          "Critically Endangered",
+          "Endangered",
+          "Vulnerable",
+          "Extinct"
+        ],
+        "range": [
+          "#8C2D04",
+          "#D95F0E",
+          "#FDBE85",
+          "#54278F"
+        ]
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Threatened status",
+        "type": "nominal",
+        "title": "Conservation category"
+      },
+      {
+        "field": "Species Count",
+        "type": "quantitative",
+        "title": "Species count"
+      }
+    ]
+  },
+  "background": "white",
+  "config": {
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "gridColor": "#E5E7EB",
+      "domainColor": "#9CA3AF",
+      "tickColor": "#9CA3AF"
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 11,
+      "titleFontSize": 12
+    }
+  }
+}

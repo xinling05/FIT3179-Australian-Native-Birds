@@ -1,0 +1,138 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 480,
+  "height": 340,
+  "padding": {
+    "top": 15,
+    "left": 5,
+    "right": 5,
+    "bottom": 5
+  },
+
+  "data": {
+    "url": "data/bird_family_treemap.csv"
+  },
+
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "stroke": "white",
+        "strokeWidth": 1.5
+      },
+
+      "encoding": {
+        "x": {
+          "field": "x0",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [0, 100]
+          }
+        },
+
+        "x2": {
+          "field": "x1"
+        },
+
+        "y": {
+          "field": "y0",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [0, 100],
+            "reverse": true
+          }
+        },
+
+        "y2": {
+          "field": "y1"
+        },
+
+        "color": {
+          "field": "Family",
+          "type": "nominal",
+          "legend": null,
+
+          "scale": {
+            "range": [
+              "#1D4ED8",
+              "#3B82F6",
+              "#0EA5E9",
+              "#0891B2",
+              "#7C3AED",
+              "#A855F7",
+              "#C026D3",
+              "#DB2777",
+              "#EA580C",
+              "#F59E0B",
+              "#92400E",
+              "#64748B"
+            ]
+          }
+        },
+
+        "tooltip": [
+          {
+            "field": "Family",
+            "type": "nominal",
+            "title": "Bird family"
+          },
+          {
+            "field": "Species Count",
+            "type": "quantitative",
+            "title": "Species count"
+          }
+        ]
+      }
+    },
+
+    {
+      "transform": [
+        {
+          "filter": "datum['Species Count'] >= 15 && (datum.x1 - datum.x0) >= 9 && (datum.y1 - datum.y0) >= 6"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "font": "Arial",
+        "fontSize": 9,
+        "fontWeight": "bold",
+        "color": "white"
+      },
+      "encoding": {
+        "x": {
+          "field": "cx",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [0, 100]
+          }
+        },
+        "y": {
+          "field": "cy",
+          "type": "quantitative",
+          "axis": null,
+          "scale": {
+            "domain": [0, 100],
+            "reverse": true
+          }
+        },
+        "text": {
+          "field": "Family",
+          "type": "nominal"
+        }
+      }
+    }
+  ],
+
+  "background": "white",
+
+  "config": {
+    "font": "Arial",
+
+    "view": {
+      "stroke": null
+    }
+  }
+}

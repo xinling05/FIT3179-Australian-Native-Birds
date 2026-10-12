@@ -1,0 +1,108 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Where are threatened birds concentrated?",
+  "width": 480,
+  "height": 420,
+
+  "projection": {
+    "type": "equalEarth",
+    "center": [134, -28],
+    "scale": 570
+  },
+
+  "data": {
+    "url": "data/australia_states_2026.json",
+    "format": {
+      "type": "topojson",
+      "feature": "australia_states_2026"
+    }
+  },
+
+  "transform": [
+    {
+      "lookup": "properties.STE_NAME26",
+      "from": {
+        "data": {
+          "url": "data/chart1_state_summary.csv"
+        },
+        "key": "State or Territory",
+        "fields": [
+          "Listed Birds",
+          "Percent of National Listed Birds"
+        ]
+      }
+    }
+  ],
+
+  "mark": {
+    "type": "geoshape",
+    "stroke": "white",
+    "strokeWidth": 0.8
+  },
+
+  "encoding": {
+    "color": {
+    "field": "Percent of National Listed Birds",
+    "type": "quantitative",
+    "title": "Listed birds (%)",
+    "scale": {
+      "scheme": "oranges"
+    },
+    "legend": {
+      "orient": "bottom",
+      "direction": "horizontal",
+      "gradientLength": 220,
+      "gradientThickness": 12,
+      "title": "Listed birds (%)",
+      "titleAnchor": "start"
+    }
+  },
+
+    "tooltip": [
+      {
+        "field": "properties.STE_NAME26",
+        "type": "nominal",
+        "title": "State or territory"
+      },
+      {
+        "field": "Listed Birds",
+        "type": "quantitative",
+        "title": "Listed bird species"
+      },
+      {
+        "field": "Percent of National Listed Birds",
+        "type": "quantitative",
+        "title": "Share of national list (%)",
+        "format": ".1f"
+      }
+    ]
+  },
+
+  "background": "white",
+
+  "config": {
+    "font": "Arial",
+
+    "view": {
+      "stroke": null
+    },
+
+    "title": {
+      "font": "Georgia",
+      "fontSize": 18,
+      "fontWeight": "bold",
+      "anchor": "start",
+      "color": "#1F2937",
+      "offset": 12
+    },
+
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "titleColor": "#374151",
+      "labelColor": "#4B5563"
+    }
+  }
+}

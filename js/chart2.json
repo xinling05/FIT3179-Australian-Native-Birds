@@ -1,0 +1,91 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Where are Rainbow Lorikeets recorded?",
+  "width": 480,
+  "height": 420,
+  "projection": {
+    "type": "equalEarth",
+    "center": [134, -28],
+    "scale": 570
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "data/australia_states_2026.json",
+        "format": {
+          "type": "topojson",
+          "feature": "australia_states_2026"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#F3F4F6",
+        "stroke": "#B8C0CC",
+        "strokeWidth": 0.7
+      }
+    },
+    {
+      "data": {
+        "url": "data/rainbow_lorikeet_points_5000.csv"
+      },
+      "mark": {
+        "type": "circle",
+        "size": 10,
+        "opacity": 0.35,
+        "color": "#2563EB"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "decimalLongitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "decimalLatitude",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "commonName",
+            "type": "nominal",
+            "title": "Species"
+          },
+          {
+            "field": "stateProvince",
+            "type": "nominal",
+            "title": "State or territory"
+          }
+        ]
+      }
+    }
+  ],
+  "background": "white",
+  "config": {
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Georgia",
+      "fontSize": 18,
+      "fontWeight": "bold",
+      "anchor": "start",
+      "color": "#1F2937",
+      "offset": 12
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "gridColor": "#E5E7EB",
+      "domainColor": "#9CA3AF",
+      "tickColor": "#9CA3AF"
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 11,
+      "titleFontSize": 12
+    }
+  }
+}

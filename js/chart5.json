@@ -1,0 +1,140 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 480,
+  "height": 330,
+  "data": {
+    "url": "data/bio_087_horizln1.csv"
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "area",
+        "color": "#60A5FA",
+        "opacity": 0.18
+      },
+      "encoding": {
+        "x": {
+          "field": "Year87",
+          "type": "quantitative",
+          "title": "Year",
+          "axis": {
+            "format": "d",
+            "tickCount": 7
+          }
+        },
+        "y": {
+          "field": "CI_low",
+          "type": "quantitative",
+          "title": "Threatened Bird Index"
+        },
+        "y2": {
+          "field": "CI_high"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "line",
+        "color": "#1D4ED8",
+        "strokeWidth": 2.5
+      },
+      "encoding": {
+        "x": {
+          "field": "Year87",
+          "type": "quantitative",
+          "title": "Year",
+          "axis": {
+            "format": "d",
+            "tickCount": 7
+          }
+        },
+        "y": {
+          "field": "LPI_final87",
+          "type": "quantitative",
+          "title": "Threatened Bird Index"
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "size": 250,
+        "opacity": 0.001
+      },
+      "encoding": {
+        "x": {
+          "field": "Year87",
+          "type": "quantitative"
+        },
+        "y": {
+          "field": "LPI_final87",
+          "type": "quantitative"
+        },
+        "tooltip": [
+          {
+            "field": "Year87",
+            "type": "quantitative",
+            "title": "Year",
+            "format": "d"
+          },
+          {
+            "field": "LPI_final87",
+            "type": "quantitative",
+            "title": "Bird index",
+            "format": ".2f"
+          },
+          {
+            "field": "CI_low",
+            "type": "quantitative",
+            "title": "Lower bound",
+            "format": ".2f"
+          },
+          {
+            "field": "CI_high",
+            "type": "quantitative",
+            "title": "Upper bound",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "#6B7280",
+        "strokeDash": [
+          5,
+          5
+        ]
+      },
+      "encoding": {
+        "y": {
+          "datum": 1
+        }
+      }
+    }
+  ],
+  "background": "white",
+  "config": {
+    "font": "Arial",
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "gridColor": "#E5E7EB",
+      "domainColor": "#9CA3AF",
+      "tickColor": "#9CA3AF"
+    },
+    "legend": {
+      "labelFont": "Arial",
+      "titleFont": "Arial",
+      "labelFontSize": 11,
+      "titleFontSize": 12
+    }
+  }
+}
