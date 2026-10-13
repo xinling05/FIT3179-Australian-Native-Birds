@@ -50,29 +50,51 @@
         },
 
         "color": {
-          "field": "Family",
+          "field": "Order Group",
           "type": "nominal",
-          "legend": null,
-
+          "title": "Bird order",
           "scale": {
+            "domain": [
+              "Passeriformes",
+              "Charadriiformes",
+              "Procellariiformes",
+              "Psittaciformes",
+              "Columbiformes",
+              "Anseriformes",
+              "Ciconiiformes",
+              "Other orders"
+            ],
             "range": [
-              "#1D4ED8",
-              "#3B82F6",
-              "#0EA5E9",
-              "#0891B2",
-              "#7C3AED",
-              "#A855F7",
-              "#C026D3",
-              "#DB2777",
-              "#EA580C",
-              "#F59E0B",
-              "#92400E",
-              "#64748B"
+              "#4C78A8",
+              "#F28E2B",
+              "#7E57C2",
+              "#B279A2",
+              "#6B7280",
+              "#D4A72C",
+              "#72B7B2",
+              "#D9DEE5"
             ]
+          },
+
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "titleAnchor": "start",
+            "columns": 4,
+            "symbolType": "square",
+            "symbolSize": 90,
+            "labelFontSize": 9,
+            "titleFontSize": 11,
+            "labelLimit": 120
           }
         },
 
         "tooltip": [
+          {
+            "field": "Order",
+            "type": "nominal",
+            "title": "Bird order"
+          },
           {
             "field": "Family",
             "type": "nominal",
@@ -90,16 +112,17 @@
     {
       "transform": [
         {
-          "filter": "datum['Species Count'] >= 15 && (datum.x1 - datum.x0) >= 9 && (datum.y1 - datum.y0) >= 6"
+          "filter": "datum['Species Count'] >= 15 && (datum.x1 - datum.x0) >= 10 && (datum.y1 - datum.y0) >= 7"
         }
       ],
+
       "mark": {
         "type": "text",
         "font": "Arial",
         "fontSize": 9,
-        "fontWeight": "bold",
-        "color": "white"
+        "fontWeight": "bold"
       },
+
       "encoding": {
         "x": {
           "field": "cx",
@@ -109,6 +132,7 @@
             "domain": [0, 100]
           }
         },
+
         "y": {
           "field": "cy",
           "type": "quantitative",
@@ -118,9 +142,18 @@
             "reverse": true
           }
         },
+
         "text": {
           "field": "Family",
           "type": "nominal"
+        },
+
+        "color": {
+          "condition": {
+            "test": "datum['Order Group'] == 'Passeriformes' || datum['Order Group'] == 'Charadriiformes' || datum['Order Group'] == 'Procellariiformes'",
+            "value": "white"
+          },
+          "value": "#1F2937"
         }
       }
     }
@@ -130,7 +163,6 @@
 
   "config": {
     "font": "Arial",
-
     "view": {
       "stroke": null
     }

@@ -1,99 +1,99 @@
-﻿Family,Species Count,x0,x1,y0,y1,cx,cy
-Meliphagidae,75,0,37.3134,0,25.6705,18.6567,12.8352
-Psittacidae,45,37.3134,59.7015,0,25.6705,48.5075,12.8352
-Acanthizidae,42,59.7015,80.597,0,25.6705,70.1493,12.8352
-Procellariidae,39,80.597,100.0,0,25.6705,90.2985,12.8352
-Scolopacidae,33,0,28.6957,25.6705,40.3576,14.3478,33.014
-Columbidae,28,28.6957,53.0435,25.6705,40.3576,40.8696,33.014
-Laridae,28,53.0435,77.3913,25.6705,40.3576,65.2174,33.014
-Maluridae,26,77.3913,100.0,25.6705,40.3576,88.6957,33.014
-Anatidae,26,0,30.2326,40.3576,51.341,15.1163,45.8493
-Petroicidae,22,30.2326,55.814,40.3576,51.341,43.0233,45.8493
-Estrildidae,19,55.814,77.907,40.3576,51.341,66.8605,45.8493
-Accipitridae,19,77.907,100.0,40.3576,51.341,88.9535,45.8493
-Rallidae,16,0,26.2295,51.341,59.1315,13.1148,55.2363
-Artamidae,15,26.2295,50.8197,51.341,59.1315,38.5246,55.2363
-Charadriidae,15,50.8197,75.4098,51.341,59.1315,63.1148,55.2363
-Ardeidae,15,75.4098,100.0,51.341,59.1315,87.7049,55.2363
-Monarchidae,14,0,33.3333,59.1315,64.4955,16.6667,61.8135
-Cacatuidae,14,33.3333,66.6667,59.1315,64.4955,50.0,61.8135
-Diomedeidae,14,66.6667,100.0,59.1315,64.4955,83.3333,61.8135
-Pachycephalidae,13,0,36.1111,64.4955,69.0932,18.0556,66.7944
-Cuculidae,12,36.1111,69.4444,64.4955,69.0932,52.7778,66.7944
-Ptilonorhynchidae,11,69.4444,100.0,64.4955,69.0932,84.7222,66.7944
-Alcedinidae,10,0,38.4615,69.0932,72.4138,19.2308,70.7535
-Phasianidae,9,38.4615,73.0769,69.0932,72.4138,55.7692,70.7535
-Rhipiduridae,7,73.0769,100.0,69.0932,72.4138,86.5385,70.7535
-Campephagidae,7,0,33.3333,72.4138,75.0958,16.6667,73.7548
-Strigidae,7,33.3333,66.6667,72.4138,75.0958,50.0,73.7548
-Spheniscidae,7,66.6667,100.0,72.4138,75.0958,83.3333,73.7548
-Cinclosomatidae,7,0,36.8421,75.0958,77.5223,18.4211,76.3091
-Hirundinidae,6,36.8421,68.4211,75.0958,77.5223,52.6316,76.3091
-Corvidae,6,68.4211,100.0,75.0958,77.5223,84.2105,76.3091
-Phalacrocoracidae,6,0,33.3333,77.5223,79.8212,16.6667,78.6718
-Climacteridae,6,33.3333,66.6667,77.5223,79.8212,50.0,78.6718
-Falconidae,6,66.6667,100.0,77.5223,79.8212,83.3333,78.6718
-Turnicidae,6,0,54.5455,79.8212,81.2261,27.2727,80.5236
-Threskiornithidae,5,54.5455,100.0,79.8212,81.2261,77.2727,80.5236
-Zosteropidae,5,0,50.0,81.2261,82.5032,25.0,81.8646
-Turdidae,5,50.0,100.0,81.2261,82.5032,75.0,81.8646
-Psophodidae,5,0,50.0,82.5032,83.7803,25.0,83.1418
-Sulidae,5,50.0,100.0,82.5032,83.7803,75.0,83.1418
-Locustellidae,5,0,50.0,83.7803,85.0575,25.0,84.4189
-Tytonidae,5,50.0,100.0,83.7803,85.0575,75.0,84.4189
-Oceanitidae,5,0,50.0,85.0575,86.3346,25.0,85.696
-Stercorariidae,5,50.0,100.0,85.0575,86.3346,75.0,85.696
-Pardalotidae,4,0,50.0,86.3346,87.3563,25.0,86.8455
-Motacillidae,4,50.0,100.0,86.3346,87.3563,75.0,86.8455
-Pomatostomidae,4,0,50.0,87.3563,88.378,25.0,87.8672
-Apodidae,4,50.0,100.0,87.3563,88.378,75.0,87.8672
-Paradisaeidae,4,0,57.1429,88.378,89.272,28.5714,88.825
-Sturnidae,3,57.1429,100.0,88.378,89.272,78.5714,88.825
-Podicipedidae,3,0,50.0,89.272,90.0383,25.0,89.6552
-Oriolidae,3,50.0,100.0,89.272,90.0383,75.0,89.6552
-Megapodiidae,3,0,50.0,90.0383,90.8046,25.0,90.4215
-Haematopodidae,3,50.0,100.0,90.0383,90.8046,75.0,90.4215
-Recurvirostridae,3,0,50.0,90.8046,91.5709,25.0,91.1877
-Podargidae,3,50.0,100.0,90.8046,91.5709,75.0,91.1877
-Fringillidae,3,0,100.0,91.5709,91.954,50.0,91.7625
-Pittidae,3,0,100.0,91.954,92.3372,50.0,92.1456
-Dasyornithidae,3,0,100.0,92.3372,92.7203,50.0,92.5287
-Fregatidae,3,0,100.0,92.7203,93.1034,50.0,92.9119
-Caprimulgidae,3,0,100.0,93.1034,93.4866,50.0,93.295
-Passeridae,2,0,100.0,93.4866,93.742,50.0,93.6143
-Dicaeidae,2,0,100.0,93.742,93.9974,50.0,93.8697
-Cisticolidae,2,0,100.0,93.9974,94.2529,50.0,94.1252
-Corcoracidae,2,0,100.0,94.2529,94.5083,50.0,94.3806
-Burhinidae,2,0,100.0,94.5083,94.7637,50.0,94.636
-Casuariidae,2,0,100.0,94.7637,95.0192,50.0,94.8914
-Menuridae,2,0,100.0,95.0192,95.2746,50.0,95.1469
-Gruidae,2,0,100.0,95.2746,95.53,50.0,95.4023
-Alaudidae,2,0,100.0,95.53,95.7854,50.0,95.6577
-Orthonychidae,2,0,100.0,95.7854,96.0409,50.0,95.9132
-Glareolidae,2,0,100.0,96.0409,96.2963,50.0,96.1686
-Phaethontidae,2,0,100.0,96.2963,96.5517,50.0,96.424
-Atrichornithidae,2,0,100.0,96.5517,96.8072,50.0,96.6794
-Hydrobatidae,2,0,100.0,96.8072,97.0626,50.0,96.9349
-Pelecanidae,1,0,100.0,97.0626,97.1903,50.0,97.1264
-Anhingidae,1,0,100.0,97.1903,97.318,50.0,97.2542
-Meropidae,1,0,100.0,97.318,97.4457,50.0,97.3819
-Dicruridae,1,0,100.0,97.4457,97.5734,50.0,97.5096
-Acrocephalidae,1,0,100.0,97.5734,97.7011,50.0,97.6373
-Anseranatidae,1,0,100.0,97.7011,97.8289,50.0,97.765
-Coraciidae,1,0,100.0,97.8289,97.9566,50.0,97.8927
-Jacanidae,1,0,100.0,97.9566,98.0843,50.0,98.0204
-Neosittidae,1,0,100.0,98.0843,98.212,50.0,98.1481
-Pycnonotidae,1,0,100.0,98.212,98.3397,50.0,98.2759
-Aegothelidae,1,0,100.0,98.3397,98.4674,50.0,98.4036
-Falcunculidae,1,0,100.0,98.4674,98.5951,50.0,98.5313
-Oreoicidae,1,0,100.0,98.5951,98.7229,50.0,98.659
-Ciconiidae,1,0,100.0,98.7229,98.8506,50.0,98.7867
-Otididae,1,0,100.0,98.8506,98.9783,50.0,98.9144
-Machaerirhynchidae,1,0,100.0,98.9783,99.106,50.0,99.0421
-Nectariniidae,1,0,100.0,99.106,99.2337,50.0,99.1699
-Numididae,1,0,100.0,99.2337,99.3614,50.0,99.2976
-Rostratulidae,1,0,100.0,99.3614,99.4891,50.0,99.4253
-Pedionomidae,1,0,100.0,99.4891,99.6169,50.0,99.553
-Struthionidae,1,0,100.0,99.6169,99.7446,50.0,99.6807
-Odontophoridae,1,0,100.0,99.7446,99.8723,50.0,99.8084
-Chionidae,1,0,100.0,99.8723,100.0,50.0,99.9361
+Order Group,Order,Family,Species Count,x0,x1,y0,y1,cx,cy
+Passeriformes,Passeriformes,Meliphagidae,75,0.0,28.7356,0.0,33.3333,14.3678,16.6667
+Passeriformes,Passeriformes,Acanthizidae,42,28.7356,44.8276,0.0,33.3333,36.7816,16.6667
+Passeriformes,Passeriformes,Maluridae,26,0.0,17.3958,33.3333,52.4217,8.6979,42.8775
+Passeriformes,Passeriformes,Petroicidae,22,17.3958,32.1153,33.3333,52.4217,24.7555,42.8775
+Passeriformes,Passeriformes,Estrildidae,19,32.1153,44.8276,33.3333,52.4217,38.4714,42.8775
+Passeriformes,Passeriformes,Artamidae,15,0.0,16.0099,52.4217,64.3875,8.0049,58.4046
+Passeriformes,Passeriformes,Monarchidae,14,16.0099,30.9524,52.4217,64.3875,23.4811,58.4046
+Passeriformes,Passeriformes,Pachycephalidae,13,30.9524,44.8276,52.4217,64.3875,37.89,58.4046
+Passeriformes,Passeriformes,Ptilonorhynchidae,11,0.0,11.4759,64.3875,76.6293,5.7379,70.5084
+Passeriformes,Passeriformes,Campephagidae,7,0.0,11.4759,76.6293,84.4195,5.7379,80.5244
+Passeriformes,Passeriformes,Cinclosomatidae,7,0.0,11.4759,84.4195,92.2098,5.7379,88.3146
+Passeriformes,Passeriformes,Rhipiduridae,7,0.0,11.4759,92.2098,100.0,5.7379,96.1049
+Passeriformes,Passeriformes,Climacteridae,6,11.4759,20.1763,64.3875,73.1949,15.8261,68.7912
+Passeriformes,Passeriformes,Corvidae,6,20.1763,28.8768,64.3875,73.1949,24.5265,68.7912
+Passeriformes,Passeriformes,Hirundinidae,6,28.8768,37.5772,64.3875,73.1949,33.227,68.7912
+Passeriformes,Passeriformes,Locustellidae,5,37.5772,44.8276,64.3875,73.1949,41.2024,68.7912
+Passeriformes,Passeriformes,Psophodidae,5,11.4759,18.6227,73.1949,82.1299,15.0493,77.6624
+Passeriformes,Passeriformes,Turdidae,5,11.4759,18.6227,82.1299,91.065,15.0493,86.5974
+Passeriformes,Passeriformes,Zosteropidae,5,11.4759,18.6227,91.065,100.0,15.0493,95.5325
+Passeriformes,Passeriformes,Motacillidae,4,18.6227,25.1739,73.1949,80.9927,21.8983,77.0938
+Passeriformes,Passeriformes,Paradisaeidae,4,25.1739,31.7251,73.1949,80.9927,28.4495,77.0938
+Passeriformes,Passeriformes,Pardalotidae,4,31.7251,38.2764,73.1949,80.9927,35.0007,77.0938
+Passeriformes,Passeriformes,Pomatostomidae,4,38.2764,44.8276,73.1949,80.9927,41.552,77.0938
+Passeriformes,Passeriformes,Dasyornithidae,3,18.6227,24.67,80.9927,87.3285,21.6463,84.1606
+Passeriformes,Passeriformes,Fringillidae,3,18.6227,24.67,87.3285,93.6642,21.6463,90.4964
+Passeriformes,Passeriformes,Oriolidae,3,18.6227,24.67,93.6642,100.0,21.6463,96.8321
+Passeriformes,Passeriformes,Pittidae,3,24.67,30.0453,80.9927,88.1205,27.3576,84.5566
+Passeriformes,Passeriformes,Sturnidae,3,24.67,30.0453,88.1205,95.2482,27.3576,91.6843
+Passeriformes,Passeriformes,Alaudidae,2,24.67,30.0453,95.2482,100.0,27.3576,97.6241
+Passeriformes,Passeriformes,Atrichornithidae,2,30.0453,34.9727,80.9927,86.1765,32.509,83.5846
+Passeriformes,Passeriformes,Cisticolidae,2,34.9727,39.9002,80.9927,86.1765,37.4365,83.5846
+Passeriformes,Passeriformes,Corcoracidae,2,39.9002,44.8276,80.9927,86.1765,42.3639,83.5846
+Passeriformes,Passeriformes,Dicaeidae,2,30.0453,35.5887,86.1765,90.7844,32.817,88.4804
+Passeriformes,Passeriformes,Menuridae,2,30.0453,35.5887,90.7844,95.3922,32.817,93.0883
+Passeriformes,Passeriformes,Orthonychidae,2,30.0453,35.5887,95.3922,100.0,32.817,97.6961
+Passeriformes,Passeriformes,Passeridae,2,35.5887,41.7479,86.1765,90.3236,38.6683,88.25
+Passeriformes,Passeriformes,Acrocephalidae,1,41.7479,44.8276,86.1765,90.3236,43.2878,88.25
+Passeriformes,Passeriformes,Dicruridae,1,35.5887,38.6683,90.3236,94.4706,37.1285,92.3971
+Passeriformes,Passeriformes,Falcunculidae,1,38.6683,41.7479,90.3236,94.4706,40.2081,92.3971
+Passeriformes,Passeriformes,Machaerirhynchidae,1,41.7479,44.8276,90.3236,94.4706,43.2878,92.3971
+Passeriformes,Passeriformes,Nectariniidae,1,35.5887,40.2081,94.4706,97.2353,37.8984,95.853
+Passeriformes,Passeriformes,Neosittidae,1,35.5887,40.2081,97.2353,100.0,37.8984,98.6177
+Passeriformes,Passeriformes,Oreoicidae,1,40.2081,44.8276,94.4706,97.2353,42.5179,95.853
+Passeriformes,Passeriformes,Pycnonotidae,1,40.2081,44.8276,97.2353,100.0,42.5179,98.6177
+Charadriiformes,Charadriiformes,Scolopacidae,33,44.8276,63.1211,0.0,23.0385,53.9744,11.5192
+Charadriiformes,Charadriiformes,Laridae,28,63.1211,78.6429,0.0,23.0385,70.882,11.5192
+Charadriiformes,Charadriiformes,Charadriidae,15,44.8276,59.7461,23.0385,35.8796,52.2869,29.4591
+Charadriiformes,Charadriiformes,Stercorariidae,5,59.7461,67.7027,23.0385,31.0642,63.7244,27.0514
+Charadriiformes,Charadriiformes,Haematopodidae,3,59.7461,67.7027,31.0642,35.8796,63.7244,33.4719
+Charadriiformes,Charadriiformes,Recurvirostridae,3,67.7027,74.2668,23.0385,28.8754,70.9848,25.9569
+Charadriiformes,Charadriiformes,Burhinidae,2,74.2668,78.6429,23.0385,28.8754,76.4549,25.9569
+Charadriiformes,Charadriiformes,Glareolidae,2,67.7027,71.3494,28.8754,35.8796,69.5261,32.3775
+Charadriiformes,Charadriiformes,Chionidae,1,71.3494,74.9962,28.8754,32.3775,73.1728,30.6264
+Charadriiformes,Charadriiformes,Jacanidae,1,71.3494,74.9962,32.3775,35.8796,73.1728,34.1286
+Charadriiformes,Charadriiformes,Pedionomidae,1,74.9962,78.6429,28.8754,32.3775,76.8196,30.6264
+Charadriiformes,Charadriiformes,Rostratulidae,1,74.9962,78.6429,32.3775,35.8796,76.8196,34.1286
+Procellariiformes,Procellariiformes,Procellariidae,39,78.6429,100.0,0.0,23.3218,89.3215,11.6609
+Procellariiformes,Procellariiformes,Diomedeidae,14,78.6429,92.881,23.3218,35.8796,85.762,29.6007
+Procellariiformes,Procellariiformes,Oceanitidae,5,92.881,100.0,23.3218,32.2917,96.4405,27.8067
+Procellariiformes,Procellariiformes,Hydrobatidae,2,92.881,100.0,32.2917,35.8796,96.4405,34.0856
+Psittaciformes,Psittaciformes,Psittacidae,45,44.8276,73.365,35.8796,56.0185,59.0963,45.9491
+Psittaciformes,Psittaciformes,Cacatuidae,14,73.365,82.2434,35.8796,56.0185,77.8042,45.9491
+Columbiformes,Columbiformes,Columbidae,28,82.2434,100.0,35.8796,56.0185,91.1217,45.9491
+Anseriformes,Anseriformes,Anatidae,26,44.8276,58.7659,56.0185,79.8418,51.7967,67.9302
+Anseriformes,Anseriformes,Anseranatidae,1,44.8276,58.7659,79.8418,80.7581,51.7967,80.3
+Ciconiiformes,Ciconiiformes,Ardeidae,15,44.8276,58.7659,80.7581,94.5023,51.7967,87.6302
+Ciconiiformes,Ciconiiformes,Threskiornithidae,5,44.8276,56.4428,94.5023,100.0,50.6352,97.2512
+Ciconiiformes,Ciconiiformes,Ciconiidae,1,56.4428,58.7659,94.5023,100.0,57.6044,97.2512
+Other orders,Accipitriformes,Accipitridae,19,58.7659,75.435,56.0185,70.5758,67.1004,63.2971
+Other orders,Gruiformes,Rallidae,16,75.435,89.4721,56.0185,70.5758,82.4536,63.2971
+Other orders,Cuculiformes,Cuculidae,12,89.4721,100.0,56.0185,70.5758,94.7361,63.2971
+Other orders,Coraciiformes,Alcedinidae,10,58.7659,70.051,70.5758,81.8928,64.4084,76.2343
+Other orders,Galliformes,Phasianidae,9,58.7659,70.051,81.8928,92.0781,64.4084,86.9854
+Other orders,Sphenisciformes,Spheniscidae,7,58.7659,70.051,92.0781,100.0,64.4084,96.039
+Other orders,Strigiformes,Strigidae,7,70.051,78.2978,70.5758,81.4163,74.1744,75.996
+Other orders,Falconiformes,Falconidae,6,70.051,78.2978,81.4163,90.7081,74.1744,86.0622
+Other orders,Pelecaniformes,Phalacrocoracidae,6,70.051,78.2978,90.7081,100.0,74.1744,95.3541
+Other orders,Turniciformes,Turnicidae,6,78.2978,86.4361,70.5758,79.9915,82.367,75.2836
+Other orders,Pelecaniformes,Sulidae,5,86.4361,93.2181,70.5758,79.9915,89.8271,75.2836
+Other orders,Strigiformes,Tytonidae,5,93.2181,100.0,70.5758,79.9915,96.609,75.2836
+Other orders,Apodiformes,Apodidae,4,78.2978,84.6808,79.9915,87.9949,81.4893,83.9932
+Other orders,Caprimulgiformes,Caprimulgidae,3,78.2978,84.6808,87.9949,93.9975,81.4893,90.9962
+Other orders,Pelecaniformes,Fregatidae,3,78.2978,84.6808,93.9975,100.0,81.4893,96.9987
+Other orders,Galliformes,Megapodiidae,3,84.6808,89.7872,79.9915,87.4947,87.234,83.7431
+Other orders,Caprimulgiformes,Podargidae,3,89.7872,94.8936,79.9915,87.4947,92.3404,83.7431
+Other orders,Podicipediformes,Podicipedidae,3,94.8936,100.0,79.9915,87.4947,97.4468,83.7431
+Other orders,Struthioniformes,Casuariidae,2,84.6808,90.8085,87.4947,91.6631,87.7447,89.5789
+Other orders,Gruiformes,Gruidae,2,84.6808,90.8085,91.6631,95.8316,87.7447,93.7474
+Other orders,Phaethontiformes,Phaethontidae,2,84.6808,90.8085,95.8316,100.0,87.7447,97.9158
+Other orders,Apodiformes,Aegothelidae,1,90.8085,93.8723,87.4947,91.6631,92.3404,89.5789
+Other orders,Pelecaniformes,Anhingidae,1,93.8723,96.9362,87.4947,91.6631,95.4042,89.5789
+Other orders,Coraciiformes,Coraciidae,1,96.9362,100.0,87.4947,91.6631,98.4681,89.5789
+Other orders,Coraciiformes,Meropidae,1,90.8085,93.8723,91.6631,95.8316,92.3404,93.7474
+Other orders,Galliformes,Numididae,1,90.8085,93.8723,95.8316,100.0,92.3404,97.9158
+Other orders,Galliformes,Odontophoridae,1,93.8723,96.9362,91.6631,95.8316,95.4042,93.7474
+Other orders,Gruiformes,Otididae,1,96.9362,100.0,91.6631,95.8316,98.4681,93.7474
+Other orders,Pelecaniformes,Pelecanidae,1,93.8723,96.9362,95.8316,100.0,95.4042,97.9158
+Other orders,Struthioniformes,Struthionidae,1,96.9362,100.0,95.8316,100.0,98.4681,97.9158
